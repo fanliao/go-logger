@@ -141,7 +141,7 @@ func Debug(v ...interface{}) {
 }
 
 func Debugf(format string, v ...interface{}){
-	Debug(fmt.Sprintf(string, v))
+	Debug(fmt.Sprintf(format, v))
 }
 
 func Info(v ...interface{}) {
@@ -158,7 +158,7 @@ func Info(v ...interface{}) {
 }
 
 func Infof(format string, v ...interface{}){
-	Info(fmt.Sprintf(string, v))
+	Info(fmt.Sprintf(format, v))
 }
 
 func Warn(v ...interface{}) {
@@ -174,7 +174,7 @@ func Warn(v ...interface{}) {
 	}
 }
 func Warnf(format string, v ...interface{}){
-	Warn(fmt.Sprintf(string, v))
+	Warn(fmt.Sprintf(format, v))
 }
 
 func Error(v ...interface{}) {
@@ -190,7 +190,7 @@ func Error(v ...interface{}) {
 	}
 }
 func Errorf(format string, v ...interface{}){
-	Error(fmt.Sprintf(string, v))
+	Error(fmt.Sprintf(format, v))
 }
 
 func Fatal(v ...interface{}) {
@@ -206,7 +206,7 @@ func Fatal(v ...interface{}) {
 	}
 }
 func Fatalf(format string, v ...interface{}){
-	Fatal(fmt.Sprintf(string, v))
+	Fatal(fmt.Sprintf(format, v))
 }
 
 func (f *_FILE) isMustRename() bool {
