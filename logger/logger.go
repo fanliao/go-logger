@@ -139,6 +139,11 @@ func Debug(v ...interface{}) {
 		console("debug", v)
 	}
 }
+
+func Debugf(format string, v ...interface{}){
+	Debug(fmt.Sprintf(string, v))
+}
+
 func Info(v ...interface{}) {
 	if dailyRolling {
 		fileCheck()
@@ -151,6 +156,11 @@ func Info(v ...interface{}) {
 		console("info", v)
 	}
 }
+
+func Infof(format string, v ...interface{}){
+	Info(fmt.Sprintf(string, v))
+}
+
 func Warn(v ...interface{}) {
 	if dailyRolling {
 		fileCheck()
@@ -163,6 +173,10 @@ func Warn(v ...interface{}) {
 		console("warn", v)
 	}
 }
+func Warnf(format string, v ...interface{}){
+	Warn(fmt.Sprintf(string, v))
+}
+
 func Error(v ...interface{}) {
 	if dailyRolling {
 		fileCheck()
@@ -175,6 +189,10 @@ func Error(v ...interface{}) {
 		console("error", v)
 	}
 }
+func Errorf(format string, v ...interface{}){
+	Error(fmt.Sprintf(string, v))
+}
+
 func Fatal(v ...interface{}) {
 	if dailyRolling {
 		fileCheck()
@@ -186,6 +204,9 @@ func Fatal(v ...interface{}) {
 		logObj.lg.Output(2, fmt.Sprintln("fatal", v))
 		console("fatal", v)
 	}
+}
+func Fatalf(format string, v ...interface{}){
+	Fatal(fmt.Sprintf(string, v))
 }
 
 func (f *_FILE) isMustRename() bool {
